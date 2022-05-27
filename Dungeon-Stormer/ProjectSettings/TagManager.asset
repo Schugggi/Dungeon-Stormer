@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Room
   layers:
   - Default
   - TransparentFX
@@ -38,6 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: World
+    uniqueID: 1179814257
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3562330781
+    locked: 0
+  - name: Deco
+    uniqueID: 3133956927
+    locked: 0
+  - name: Weapons
+    uniqueID: 3648947241
     locked: 0
