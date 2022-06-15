@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class XpBar : MonoBehaviour
 {
-    [SerializeField] public Slider Slider;
-    [SerializeField] public PlayerHealth playerXp;
-    [SerializeField] private Text xpNumbers;
-    // Start is called before the first frame update
+    [Header("References: ")]
+    public Slider Slider;
+    public  XpBarScript playerXp;
+    [Space]
+    
+    private Text xpNumbers;
     void Start()
     {
         xpNumbers.canvasRenderer.SetAlpha(0);
@@ -17,7 +19,6 @@ public class XpBar : MonoBehaviour
         Slider.maxValue = playerXp.xpNeeded;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Slider.value = playerXp.xp;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3765405436182315125}
   m_Layer: 0
   m_Name: SpawnpointLeft
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2045,7 +2045,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6078056081702293545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0523a3cf7a2260142a3f0fff5e9baae2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b9338be46c3ab34db797e1de51ade37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &7954601795685865851
@@ -8580,7 +8580,7 @@ GameObject:
   - component: {fileID: 5472133955091253703}
   m_Layer: 0
   m_Name: SpawnpointRight
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

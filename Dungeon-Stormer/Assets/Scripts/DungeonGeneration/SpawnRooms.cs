@@ -1,19 +1,28 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnRooms : MonoBehaviour
 {
+    [Header("Angaben für Räume")]
+    [Header("")]
+    
+    [Tooltip("Array für Räume die spawnen können")]
     public GameObject[] rooms;
-    private List<GameObject> _spawnedRooms;
 
+    [Header("Grösse auf X-Achse einstellen")]
     public int minXAxe;
     public int maxXAxe;
-
+    
+    [Header("Grösse auf Y-Achse einstellen")]
     public int minYAxe;
     public int maxYAxe;
 
+    [Header("Abstand zwischen den Räumen einstellen")]
     public int radius;
+    [Header("Anzahl Räume")]
     public int roomAmount;
+
+    [Header("Anzahl Versuche um die Räume zu generieren")]
+    public int maximumTries;
 
     // Start is called before the first frame update
     void Start()
@@ -33,16 +42,12 @@ public class SpawnRooms : MonoBehaviour
                      pos, Quaternion.identity);
                 i++;
             }
+            --maximumTries;
+            if (maximumTries <= 0)
+            {
+                Debug.Log("Es konnten nicht alle Räume gespawnt werden!");
+                break;
+            }
         }
-    }
-
-    public List<GameObject> GetSpawnedRooms()
-    {
-        return _spawnedRooms;
-    }
-
-    private void AddSpawnedRoom(GameObject room)
-    {
-        _spawnedRooms.Add(room);
     }
 }

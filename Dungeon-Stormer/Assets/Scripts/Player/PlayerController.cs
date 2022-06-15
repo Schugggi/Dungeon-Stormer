@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     [Header("Character attributes:")]
     public float MOVEMENT_BASE_SPEED = 1.0f;
     [Space]
     [Header("Character statistics:")]
-     public Vector2 movementDirection;
+    public Vector2 movementDirection;
     public float movementSpeed;
     [Space]
     [Header("References:")]
     public Rigidbody2D rb;
     public Animator animator;
     
+    [ClientCallback]
     void Update() {
+        if (!hasAuthority) { return; }
         ProcessInputs();
         Move();
         Animate();
